@@ -1,0 +1,32 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-example-loadbalancer-api-db
+spec:
+  environments:
+    - name: dev
+      authorization:
+      - role: RadixReader
+        groups:
+        - "fg_ke_radix_test"
+    - name: prod
+      authorization:
+      - role: RadixReader
+        groups:
+        - "fg_ke_radix_test"
+  components:
+    - name: app
+      src: .
+      ports:
+       - 8080
+      public: false
+    - name: redis
+      src: ./redis/
+      ports:
+       - 6379
+      public: false
+    - name: proxy
+      src: ./nginx
+      ports:
+       - 80
+      public: true
