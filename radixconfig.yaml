@@ -19,14 +19,10 @@ spec:
       src: .
       ports:
        - 8080
-      public: false
+      public: true
+      replicas: 4
     - name: redis
       src: ./redis/
       ports:
        - 6379
       public: false
-    - name: proxy
-      src: ./nginx
-      ports:
-       - 80
-      public: true
