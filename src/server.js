@@ -1,5 +1,6 @@
 'use strict';
 
+const os = require('os');
 const express = require('express');
 const morgan = require('morgan');
 const redis_client = require("redis").createClient(6379, 'redis');
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
     // This is the last reply, so all of the previous replies must have completed already
     res.write("This page was generated after talking to redis.\n\n" +
                    "Application Build: 1" + "\n\n" + 
+                   "Server from: " + os.hostname() + "\n\n" +
                    "Total requests: " + total_requests + "\n\n" +
                    "IP count: \n");
     Object.keys(reply).forEach((ip) => {
