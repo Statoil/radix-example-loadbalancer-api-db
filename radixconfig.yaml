@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: radix-loadbalancer-html
+  name: radix-static-html
 spec:
   environments:
     - name: dev
@@ -18,11 +18,13 @@ spec:
     - name: app
       src: .
       ports:
-       - 8080
+       - name: http
+         port: 8080
       public: true
       replicas: 4
     - name: redis
-      src: ./redis/
+      src: redis/
       ports:
-       - 6379
+        - name: http
+          port: 6379
       public: false
