@@ -12,4 +12,4 @@ for docker-compose.yaml a nginx is used as a load balancer in front of the app. 
 
 for radix platform, we use kubernetes services for loadbalancing instead for nginx image. This is done by setting "replicas: 4".
 
-go: 2
+go: 3
