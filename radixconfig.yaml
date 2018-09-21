@@ -28,3 +28,12 @@ spec:
         - name: http
           port: 6379
       public: false
+      environmentVariables:
+        - environment: dev
+          variables:
+            DB_HOST: "useless-dev"
+            DB_PORT: "1234"
+        - environment: prod
+          variables:
+            DB_HOST: "useless-prod"
+            DB_PORT: "9876"
