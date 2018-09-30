@@ -30,5 +30,5 @@ spec:
             DB_HOST: "useless-prod"
             DB_PORT: "9876"
       secrets:
-        - DB-PASS
+        - db-pass
     
