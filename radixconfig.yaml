@@ -31,4 +31,6 @@ spec:
             DB_PORT: "9876"
       secrets:
         - db-pass
+        - db-pass2
+        - db-pass3
     
