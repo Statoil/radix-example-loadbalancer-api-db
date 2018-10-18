@@ -5,7 +5,11 @@ metadata:
 spec:
   environments:
     - name: dev
+      build:
+        from: master
     - name: prod
+      build:
+        from: master
   components:
     - name: app
       src: .
