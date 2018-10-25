@@ -24,7 +24,6 @@ spec:
         - name: http
           port: 6379
       public: false
-      replicas: 1
       environmentVariables:
         - environment: dev
           variables:
