@@ -34,4 +34,6 @@ spec:
           variables:
             DB_HOST: "useless-prod"
             DB_PORT: "9876"
+      secrets:
+        - DB_PASS
     
