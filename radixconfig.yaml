@@ -1,32 +1,32 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: radix-loadbalancer-html1
+  name: radix-loadbalancer-html3
 spec:
   environments:
-    - name: dev#
+    - name: dev
       build:
-        from: master#
-    - name: prod#
+        from: master
+    - name: prod
       build:
-        from: master#
+        from: master
   components:
-    - name: app#
+    - name: app
       src: .
       ports:
-       - name: http#
+       - name: http
          port: 8080
       public: true
       replicas: 10
-    - name: redis#
+    - name: redis
       src: redis/
       ports:
-        - name: http#
+        - name: http
           port: 6379
       public: false
       replicas: 1
       environmentVariables:
-        - environment: dev#
+        - environment: dev
           variables:
             DB_HOST: "useless-dev"
             DB_PORT: "1234"
