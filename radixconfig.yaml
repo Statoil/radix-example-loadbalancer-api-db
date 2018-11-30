@@ -21,7 +21,7 @@ spec:
     - name: redis
       src: redis/
       ports:
-        - name: http#1
+        - name: http
           port: 6379
       public: false
       replicas: 1
