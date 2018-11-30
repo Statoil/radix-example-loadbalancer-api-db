@@ -4,9 +4,9 @@ metadata:
   name: radix-loadbalancer-html
 spec:
   environments:
-    - name: dev
+    - name: dev#1
       build:
-        from: 1#master
+        from: master
     - name: prod
       build:
         from: master
