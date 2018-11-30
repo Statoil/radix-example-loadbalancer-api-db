@@ -4,7 +4,7 @@ metadata:
   name: radix-loadbalancer-html
 spec:
   environments:
-    - name: dev#1
+    - name: dev
       build:
         from: master
     - name: prod
@@ -21,7 +21,7 @@ spec:
     - name: redis
       src: redis/
       ports:
-        - name: http
+        - name: http#1
           port: 6379
       public: false
       replicas: 1
