@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: radix-loadbalancer-html#
+  name: radix-loadbalancer-htmld
 spec:
   environments:
     - name: dev
