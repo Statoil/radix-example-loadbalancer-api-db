@@ -11,7 +11,7 @@ spec:
       build:
         from: master
   components:
-    - name: aPp
+    - name: app
       src: .
       ports:
        - name: http#
