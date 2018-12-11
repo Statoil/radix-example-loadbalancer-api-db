@@ -6,27 +6,27 @@ spec:
   environments:
     - name: dev
       build:
-        from: master#
+        from: master
     - name: prod
       build:
         from: master
   components:
-    - name: app
+    - name: apP
       src: .
       ports:
        - name: http
          port: 8080
       public: true
       replicas: 10
-    - name: redis
+    - name: rEdis
       src: redis/
       ports:
-        - name: http
+        - name: http#
           port: 6379
       public: false
       replicas: 1
       environmentVariables:
-        - environment: dev
+        - environment: dev1
           variables:
             DB_HOST: "useless-dev"
             DB_PORT: "1234"
