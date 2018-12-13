@@ -28,7 +28,7 @@ spec:
       environmentVariables:
         - environment: dev
           variables:
-            DB_HOST: "useless-dev"
+            DB_HOST: "useless-devy"
             DB_PORT: "1234"
         - environment: prod
           variables:
