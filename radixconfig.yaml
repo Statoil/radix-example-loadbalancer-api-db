@@ -36,4 +36,7 @@ spec:
             DB_PORT: "9876"
       secrets:
         - DB_PASS
+  dnsAppAlias:
+    environment: prod
+    component: app
     
