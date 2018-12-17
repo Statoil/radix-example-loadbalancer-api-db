@@ -30,10 +30,12 @@ spec:
           variables:
             DB_HOST: "useless-devy"
             DB_PORT: "1234"
+            app_alias_url:".dev.app.radix.equinor.com"
         - environment: prod
           variables:
             DB_HOST: "useless-prod"
             DB_PORT: "9876"
+            app_alias_url:".dev.app.radix.equinor.com"
       secrets:
         - DB_PASS
   dnsAppAlias:
