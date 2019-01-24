@@ -24,8 +24,6 @@ spec:
     - name: redis
       src: redis/
       ports:
-        - name: http
-          port: 6379
       public: false
       replicas: 1
       environmentVariables:
