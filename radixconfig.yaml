@@ -19,7 +19,7 @@ spec:
       ports:
        - name: http
          port: 8080
-      public: true
+      public: false
       replicas: 6
     - name: redis
       src: redis/
