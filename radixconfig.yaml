@@ -33,16 +33,14 @@ spec:
           variables:
             DB_HOST: "useless-devy"
             DB_PORT: "1234"
-          resources: 
-            requests: 
-              memory: "2G"
-              cpu: "200m"
         - environment: prod
           variables:
             DB_HOST: "useless-prod"
             DB_PORT: "9876"
-      secrets:
-        - DB_PASS
+          resources: 
+            requests: 
+              memory: "1G"
+              cpu: "200m"
   dnsAppAlias:
     environment: prod
     component: app
