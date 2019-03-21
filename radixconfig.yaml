@@ -28,24 +28,21 @@ spec:
           port: 6379      
       public: false
       replicas: 1
-      environmentVariables:
+      environmentConfig:
         - environment: dev
           variables:
             DB_HOST: "useless-devy"
             DB_PORT: "1234"
+          resources: 
+            requests: 
+              memory: "2G"
+              cpu: "200m"
         - environment: prod
           variables:
             DB_HOST: "useless-prod"
             DB_PORT: "9876"
       secrets:
         - DB_PASS
-      resources: 
-        limits: 
-          memory: "256Mi"
-          cpu: "300m"
-        requests: 
-          memory: "128Mi"
-          cpu: "200m"
   dnsAppAlias:
     environment: prod
     component: app
