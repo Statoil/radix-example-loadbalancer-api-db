@@ -39,7 +39,7 @@ spec:
             DB_PORT: "9876"
           resources: 
             requests: 
-              memory: "1G"
+              memory: "2G"
               cpu: "200m"
   dnsAppAlias:
     environment: prod
